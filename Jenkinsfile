@@ -16,6 +16,7 @@ pipeline {
 --no-daemon --console plain clean shadowjar'''
             sh 'jenkins/build-app.sh'
             archiveArtifacts 'app/build/libs/'
+            cleanWs(cleanWhenUnstable: true, cleanWhenSuccess: true, cleanWhenNotBuilt: true, cleanWhenFailure: true, cleanWhenAborted: true)
           }
         }
 
