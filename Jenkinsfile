@@ -5,13 +5,13 @@ pipeline {
       parallel {
         stage('Hello world') {
           steps {
-            sh '''echo "hello world"
-'''
+            sh 'ls'
           }
         }
 
         stage('build app') {
           steps {
+            sh 'ls'
             sh 'jenkins/build-app.sh'
             archiveArtifacts 'app/build/libs/'
           }
