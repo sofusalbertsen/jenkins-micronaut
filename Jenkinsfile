@@ -13,12 +13,12 @@ pipeline {
           agent {
             docker {
               image 'gradle:jdk11'
-              args '--no-daemon'
             }
 
           }
           steps {
             sh 'ls'
+            sh 'gradle -p app tasks'
             archiveArtifacts 'app/build/libs/'
             cleanWs(cleanWhenUnstable: true, cleanWhenSuccess: true, cleanWhenNotBuilt: true, cleanWhenFailure: true, cleanWhenAborted: true)
           }
