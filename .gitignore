@@ -25,3 +25,4 @@ complete/bin
 .idea*
 .gradle/*
 app/bin/
+.vscode/settings.json
