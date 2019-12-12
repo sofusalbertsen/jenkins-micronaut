@@ -18,7 +18,7 @@ pipeline {
           }
           steps {
             sh 'ls'
-            sh 'gradle -p app tasks'
+            sh 'jenkins/build-app.sh'
             archiveArtifacts 'app/build/libs/'
             cleanWs(cleanWhenUnstable: true, cleanWhenSuccess: true, cleanWhenNotBuilt: true, cleanWhenFailure: true, cleanWhenAborted: true)
           }
