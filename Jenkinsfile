@@ -19,11 +19,16 @@ pipeline {
           steps {
             sh 'ls'
             sh 'jenkins/build-app.sh'
-            archiveArtifacts 'app/build/libs/'
             cleanWs(cleanWhenUnstable: true, cleanWhenSuccess: true, cleanWhenNotBuilt: true, cleanWhenFailure: true, cleanWhenAborted: true)
           }
         }
 
+      }
+    }
+
+    stage('Archive the result') {
+      steps {
+        archiveArtifacts 'app/build/libs/'
       }
     }
 
