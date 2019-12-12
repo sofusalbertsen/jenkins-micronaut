@@ -6,30 +6,62 @@ In this exercise you will:
 * Edit the pipeline to run parallel stages
 * Get a downloadable artifact in the end
 
-
-
-Task
+## The pipeline editor
 
 Make a pipeline with the pipeline editor
 
-Look at the
+### Task
 
-Go into blue ocean
-create a new pipeline
-click `github` -> choose your private user -> select the forked repository and "create pipeline"
-
-Make one new stage, called "say hello"
-Add a step with the shell script, where it executes `echo "hello world"`
-click save
-commit to new branch called `pipeline-editor` -> click save and run
-click on the job
+* Go into blue ocean
+* Create a new pipeline
+* Click `github` -> choose your private user -> select the forked repository and "create pipeline"
+* Make one new stage, called "say hello"
+* Add a step with the shell script, where it executes `echo "hello world"`
+* click save
+* commit to new branch called `pipeline-editor` -> click save and run
+* click on the job and observe that it runs.
 
 ## Paralel execution
 
-Add a new step underneath the first one 
+In this part, we are going to run parallel stages.
+We are also going to try to compile our code into a binary as well.
 
+### Task
+
+* Add a new step underneath the first one called "build the app"
+* Under settings, choose "docker" as the agent, and write that the image is going to be "gradle:jdk11"
+* Click on steps and add a step with shell script, executing `jenkins/build-app.sh`
+* click save
+* commit to the same branch as before called `pipeline-editor` -> click save and run
+* click on the job and observe that it runs.
+
+If you see an output like this in the logs, then you have successfully made the assignment:
+
+```bash
++ jenkins/build-app.sh
+
+
+Welcome to Gradle 6.0.1!
+
+....
+
+BUILD SUCCESSFUL in 29s
+
+4 actionable tasks: 3 executed, 1 up-to-date
+
+```
 
 ## archiving the result
 
+In the section above, we compiled our code into a binary, but it is not easily accessible from Jenkins interface yet.
+For that we need to "archive" it.
+After we have done that, we can download it under the tab called "artifacts" after each successfull build.
 
-build app / Archive the artifacts
+### Task
+
+* add a new step in the build after the Shell script
+* Choose the type "Archive the artifacts", and add the path `app/build/libs/` to the step
+* Save, commit and run as you did in the exercise before
+* Under the job and tab called "Artifacts", you should see an artifact called "app/build/libs/app-0.1-all.jar"
+
+If you do see the artifact, then you are done with the exercise.
