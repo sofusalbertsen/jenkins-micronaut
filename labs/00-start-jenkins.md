@@ -1,5 +1,7 @@
 # Create and setup a Jenkins server
 
+In this exercise you will:
+
 ## Initial start
 
 In order for us to start using Jenkins, we need a Jenkins server.
@@ -28,6 +30,8 @@ jenkins-micronaut_jenkins_1   /sbin/tini -- /usr/local/b ...   Up      0.0.0.0:5
 
 `docker-compose logs`
 
+![Welcome page](../img/unlock-jenkins.png)
+
 ```bash
 jenkins_1  | *************************************************************
 jenkins_1  | *************************************************************
@@ -48,3 +52,5 @@ Install suggested plugins
 
 Create First Admin User, remember username and password, as we will use it througout the day.
 save and finish, and start using jenkins
+
+![Welcome page](../img/welcome.png)
