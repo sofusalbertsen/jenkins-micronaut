@@ -65,3 +65,11 @@ After we have done that, we can download it under the tab called "artifacts" aft
 * Under the job and tab called "Artifacts", you should see an artifact called "app/build/libs/app-0.1-all.jar"
 
 If you do see the artifact, then you are done with the exercise.
+
+## Further reading
+
+[Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/) describes the basic syntax of the Declarative Pipeline, including Sections and Directives.
+
+[Pipeline Basic Steps](https://jenkins.io/doc/pipeline/steps/workflow-basic-steps/#stash-stash-some-files-to-be-used-later-in-the-build) Describes the steps that are available to all Jenkins Pipelines
+
+[Pipeline Steps Reference](https://jenkins.io/doc/pipeline/steps/) Links to descriptions of steps provided by plugins.
