@@ -53,13 +53,17 @@ jenkins_1  | *************************************************************
 
 ## Navigate to jenkins, is it working?
 
-If you see a similar message when running `docker-logs` as above, you should now be able to navigate to your Jenkins instance! Go to `http://localhost:8080` and you will be presented with a screen where you input the password you just copied.  
+If you see a similar message when running `docker-logs` as above, you should now be able to navigate to your Jenkins instance! Go to `http://<your-own-hostname>:8080` and you will be presented with a screen where you input the password you just copied. If you're trying this on you own computer using docker, you'll use `localhost` as `<your-own-hostname>` otherwise for the purpose of this excercise, use the provided public hostname/ip.
 
 Install suggested plugins
 
 Create the first Admin User, remember username and password, as we will use it througout the day.
 save and finish. 
 
-![Welcome page](../img/welcome.png)
+Next you'll need to input your correct Jenkins url. Use the hostname you were provided, or in case of trying this at home on your local pc use `localhost`. In the example below we have `http://localhost:8080`.
+
+![Configure Jenkins URL](../img/instanceConfiguration.PNG)
 
 After this, you're ready to use Jenkins! 
+
+![Welcome page](../img/welcome.png)
