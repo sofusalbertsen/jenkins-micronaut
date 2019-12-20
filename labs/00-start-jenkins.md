@@ -62,7 +62,7 @@ save and finish.
 
 Next you'll need to input your correct Jenkins url. Use the hostname you were provided, or in case of trying this at home on your local pc use `localhost`. In the example below we have `http://localhost:8080`.
 
-![Configure Jenkins URL](../img/instanceConfiguration.PNG)
+![Configure Jenkins URL](../img/InstanceConfiguration.PNGG)
 
 After this, you're ready to use Jenkins! 
 
