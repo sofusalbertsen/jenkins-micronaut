@@ -71,10 +71,14 @@ We want a pipeline that on the stages looks like this:
 
 ## Test reporting
 
+TODO: add exercise
+
 * post steps
 * test reports
 
 ## Environment variables and credentials
+
+TODO: add exercise
 
 * credentials
 * env variable

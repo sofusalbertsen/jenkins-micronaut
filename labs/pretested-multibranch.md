@@ -1,5 +1,7 @@
 # Jenkins Multibranch Pipeline
 
+TODO: Review this with the new exercises
+
 ## Description
 
 This is a proof of concept for a Jenkins Multibranch Pipeline,
