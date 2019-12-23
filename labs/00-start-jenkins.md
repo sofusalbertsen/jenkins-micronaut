@@ -58,12 +58,12 @@ If you see a similar message when running `docker-logs` as above, you should now
 Install suggested plugins
 
 Create the first Admin User, remember username and password, as we will use it througout the day.
-save and finish. 
+save and finish.
 
 Next you'll need to input your correct Jenkins url. Use the hostname you were provided, or in case of trying this at home on your local pc use `localhost`. In the example below we have `http://localhost:8080`.
 
 ![Configure Jenkins URL](../img/InstanceConfiguration.PNG)
 
-After this, you're ready to use Jenkins! 
+After this, you're ready to use Jenkins!
 
 ![Welcome page](../img/welcome.png)

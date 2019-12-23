@@ -14,7 +14,7 @@ Make a pipeline with the pipeline editor
 
 * Open Blue Ocean (Click the link on the left hand side that says 'Open Blue Ocenan')
 * Create a new pipeline
-* Click `GitHub` -> choose your private GitHub organization -> select the forked repository and "create pipeline"
+* Click `GitHub` -> click on the `Create an access token here.` -> Give it a name over at Github, and scroll down to click on "generate token" -> Paste the token into Jenkins and click connect -> choose your private GitHub organization -> select the forked repository and "create pipeline"
 * Make one new stage, called "say hello"
 * Add a step with the shell script, where it executes `echo "hello world"` (TODO: Not really clear on how you get here, the UI in Blue Ocean is pretty terrible when it comes to navigation)
 * click save
@@ -28,7 +28,7 @@ We are also going to try to compile our code into a binary as well.
 
 ### Task
 
-* Add a new step underneath the first one called "build app" (TODO: There is a Hello world 
+* Add a new step underneath the first one called "build app" 
 * Under settings, choose "docker" as the agent, and write that the image is going to be "gradle:jdk11"
 * Click on steps and add a step with shell script, executing `jenkins/build-app.sh`
 * click save
