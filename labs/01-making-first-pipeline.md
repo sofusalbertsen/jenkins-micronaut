@@ -12,23 +12,23 @@ Make a pipeline with the pipeline editor
 
 ### Task
 
-* Go into blue ocean
+* Open Blue Ocean (Click the link on the left hand side that says 'Open Blue Ocenan')
 * Create a new pipeline
-* Click `github` -> choose your private user -> select the forked repository and "create pipeline"
+* Click `GitHub` -> choose your private GitHub organization -> select the forked repository and "create pipeline"
 * Make one new stage, called "say hello"
-* Add a step with the shell script, where it executes `echo "hello world"`
+* Add a step with the shell script, where it executes `echo "hello world"` (TODO: Not really clear on how you get here, the UI in Blue Ocean is pretty terrible when it comes to navigation)
 * click save
 * commit to new branch called `pipeline-editor` -> click save and run
 * click on the job and observe that it runs.
 
-## Paralel execution
+## Parallel execution
 
 In this part, we are going to run parallel stages.
 We are also going to try to compile our code into a binary as well.
 
 ### Task
 
-* Add a new step underneath the first one called "build the app"
+* Add a new step underneath the first one called "build app" (TODO: There is a Hello world 
 * Under settings, choose "docker" as the agent, and write that the image is going to be "gradle:jdk11"
 * Click on steps and add a step with shell script, executing `jenkins/build-app.sh`
 * click save
