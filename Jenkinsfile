@@ -10,7 +10,7 @@ pipeline {
       }
       steps {
         stash(excludes: '.git', name: 'code')
-        deletedir()
+        deleteDir()
       }
     }
 
