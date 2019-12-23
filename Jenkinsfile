@@ -9,6 +9,7 @@ pipeline {
 
       }
       steps {
+        checkout scm
         stash(excludes: '.git', name: 'code')
         deleteDir()
       }
