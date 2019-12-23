@@ -55,11 +55,16 @@ This is achieved by agent labels depicting which of the agents this particular s
 
 When we transfer our job from one agent to another, then we usually also need to transfer our repository data along with other allready made binaries.
 
+> Note: everytime you change agent (both node and docker agent), Jenkins will clone down the repository again. If you do not want that, you need to add the option [skipDefaultCheckout(true)](https://jenkins.io/doc/book/pipeline/syntax/#options) to the stages that does not need this option, or in the [stages part in the top](https://jenkins.io/blog/2018/04/09/whats-in-declarative/#new-options)
+
 ### Tasks
 
-
-Agents
-Stash and unstash
+* Make a new stage called 'clone down'
+* Make that stage run on the agent with a node that has the label 'host'
+* Inside that stage, make a `stash` step that excludes the .git folder, and has the name "code"
+* In the stage `build app`, add the skipDefaultCheckout(true) option
+* Add a new first step where you unstash your "code" stash.
+* Run the pipeline and see that the build still runs
 
 ## Test reporting
 
