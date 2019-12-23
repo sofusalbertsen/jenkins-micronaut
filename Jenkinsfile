@@ -9,7 +9,7 @@ pipeline {
 
       }
       steps {
-        checkout scm
+        //checkout scm
         stash(excludes: '.git', name: 'code')
         deleteDir()
       }
@@ -24,6 +24,9 @@ pipeline {
         }
 
         stage('build app') {
+          options {
+            skipDefaultCheckout(true)
+          }
           agent {
             docker {
               image 'gradle:jdk11'
@@ -42,7 +45,5 @@ pipeline {
     }
 
   }
-  options {
-    skipDefaultCheckout(true)
-  }
+  
 }
