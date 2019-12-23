@@ -49,17 +49,24 @@ Once you are satisfied with the changes, you can use Replay to view them again, 
 
 ## Building on different machines
 
-Having differnet types of hardware to run your pipeline is common. Some things can be done on inexpensive low performance hardware, while other things require extra ram, or a specific piece of hardware to be run on.
+Having different types of hardware to run your pipeline on is common. Some things can be done on inexpensive low performance hardware, while other things require extra ram, or a specific piece of hardware to be run on.
 
 This is achieved by agent labels depicting which of the agents this particular step should be run on.
 
-When we transfer our job from one agent to another, then we usually also need to 
+When we transfer our job from one agent to another, then we usually also need to transfer our repository data along with other allready made binaries.
 
 ### Tasks
+
+
 Agents
 Stash and unstash
 
+## Test reporting
+
 * post steps
+* test reports
+
+## Environment variables and credentials
+
 * credentials
 * env variable
-* test reports
