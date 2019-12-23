@@ -19,6 +19,7 @@ pipeline {
           }
           steps {
             sh 'jenkins/build-app.sh'
+            archiveArtifacts 'app/build/libs/'
           }
         }
 
