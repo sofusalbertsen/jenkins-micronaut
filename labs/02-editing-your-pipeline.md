@@ -59,6 +59,9 @@ When we transfer our job from one agent to another, then we usually also need to
 
 ### Tasks
 
+We want a pipeline that on the stages looks like this:
+![Stages](../img/stages02.png)
+
 * Make a new stage called 'clone down'
 * Make that stage run on the agent with a node that has the label 'host'
 * Inside that stage, make a `stash` step that excludes the .git folder, and has the name "code"
