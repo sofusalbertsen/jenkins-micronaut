@@ -4,7 +4,7 @@ pipeline {
     stage('clone down and test') {
       agent {
         node {
-          label 'swarm'
+          label 'Host'
         }
 
       }
