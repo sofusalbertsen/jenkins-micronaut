@@ -66,6 +66,8 @@ After we have done that, we can download it under the tab called "artifacts" aft
 
 If you do see the artifact, then you are done with the exercise.
 
+> Tip: If you want to see the pipeline that was run, click on the job in Blue Ocean view and press Ctrl+S, and Jenkins will display the whole pipeline for you, where you also can make changes and let them reload back to the UI.
+
 ## Further reading
 
 [Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/) describes the basic syntax of the Declarative Pipeline, including Sections and Directives.
